@@ -71,27 +71,6 @@ Then restart the backend and upload any video clip through the web UI.
 
 ---
 
-## Real ROS 2 Mode (WSL / Ubuntu)
-
-```bash
-# Prerequisites: ROS 2 Humble or Jazzy + rosbridge_suite
-sudo apt install ros-$ROS_DISTRO-rosbridge-suite
-
-# Build and launch
-source /opt/ros/$ROS_DISTRO/setup.bash
-bash scripts/run_ros2.sh /path/to/video.mp4 /path/to/model.onnx
-
-# In a second terminal — rosbridge WebSocket for the frontend
-ros2 launch autonomous_perception rosbridge.launch.py
-
-# Start the FastAPI backend (connects to rosbridge on ws://localhost:9090)
-cd backend && uvicorn main:app --reload --port 8000
-
-# Start the React dashboard
-cd frontend && npm run dev
-```
-
----
 
 ## Architecture Decisions
 
