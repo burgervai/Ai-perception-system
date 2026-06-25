@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Build
+build/
+dist/
+*.whl
+
+# Node
+node_modules/
+.vite/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Project artifacts
+ml/checkpoints/*.pt
+ml/checkpoints/*.onnx
+backend/storage/uploads/*
+backend/storage/telemetry/*
+pipeline/outputs/*
+data/*
+!data/sample/.gitkeep
+logs/
+*.log
+
+# ROS 2
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
