@@ -33,6 +33,7 @@ pipeline/outputs/*
 data/*
 !data/sample/.gitkeep
 logs/
+mlruns/
 *.log
 
 # ROS 2
